@@ -1,6 +1,5 @@
 var fs = require('fs'),
     util = require('util'),
-    moment = require('moment'),
     path = require('path'),
     program = require('commander'),
     _ = require('lodash');
