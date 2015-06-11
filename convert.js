@@ -61,7 +61,7 @@ var tools = {
 
 //main program part
 program
-   .version('0.1.0')
+   .version('1.0.1')
    .option('-f, --file [path]', 'Srouce file', '')
    .parse(process.argv);
 
