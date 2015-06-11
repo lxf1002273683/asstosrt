@@ -18,6 +18,10 @@
     "ass",
     "srt"
   ],
+  "repository": { 
+    "type": "git", 
+    "url": "https://github.com/neravaren/asstosrt.git"
+  },
   "author": "Tishin Alex",
   "license": "MIT"
 }
