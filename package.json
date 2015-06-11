@@ -1,0 +1,23 @@
+{
+  "name": "AssToSrtConvert",
+  "version": "1.0.1",
+  "description": "Tools for converting subtitles from Advanced SubStation Alpha to SubRip format",
+  "main": "convert.js",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "lodash": "^3.9.3",
+    "moment": "^2.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node convert.js -h"
+  },
+  "keywords": [
+    "sub",
+    "sutitles",
+    "ass",
+    "srt"
+  ],
+  "author": "Tishin Alex",
+  "license": "MIT"
+}
