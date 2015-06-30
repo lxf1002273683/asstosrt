@@ -61,7 +61,7 @@ var tools = {
 //main program part
 program
    .version('1.0.1')
-   .option('-f, --file [path]', 'Srouce file', '')
+   .option('-f, --file [path]', 'Source file', '')
    .parse(process.argv);
 
 if (program.file === '' || !fs.existsSync(program.file) || !_.endsWith(program.file, '.ass')) {
