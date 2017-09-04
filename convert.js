@@ -1,6 +1,7 @@
 var fs = require('fs'),
     util = require('util'),
     path = require('path'),
+    moment = require('moment'),
     program = require('commander'),
     _ = require('lodash');
 
@@ -97,6 +98,15 @@ for(var i=1; i<dialoges.length; i++) {
 if (mergeCount>0) {
     console.log('Line merged: ' + mergeCount);
 }
+
+dialoges.sort(function (a, b) {
+    return a.startInt - b.startInt;
+});
+
+dialoges = dialoges.filter(function (x) {
+    //TODO: Regenerate 'end' time from 'endInt'
+    return x.startInt < x.endInt;
+});
 
 var outContent = "";
 for(var i=0; i<dialoges.length; i++) {
