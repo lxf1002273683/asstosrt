@@ -79,6 +79,11 @@ var outputFile =  path.join(path.dirname(program.file), path.basename(program.fi
 //parse ASS
 var dialoges = _.map(lines, tools.parseAssLineToObj);
 
+//sort by start time
+dialoges.sort(function (a, b) {
+    return a.startInt - b.startInt;
+});
+
 //recheck if we have overlay
 var mergeCount = 0;
 for(var i=1; i<dialoges.length; i++) {
@@ -98,15 +103,6 @@ for(var i=1; i<dialoges.length; i++) {
 if (mergeCount>0) {
     console.log('Line merged: ' + mergeCount);
 }
-
-dialoges.sort(function (a, b) {
-    return a.startInt - b.startInt;
-});
-
-dialoges = dialoges.filter(function (x) {
-    //TODO: Regenerate 'end' time from 'endInt'
-    return x.startInt < x.endInt;
-});
 
 var outContent = "";
 for(var i=0; i<dialoges.length; i++) {
